@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Calculator, GraduationCap, Home as HomeIcon, Menu, PlusCircle, Search, Sparkles, X } from 'lucide-react';
+import { Calculator, Home as HomeIcon, Menu, PlusCircle, Search, Sparkles, X } from 'lucide-react';
 import { Home } from '../pages/Home';
 import { CalculatorPage } from '../pages/Calculator';
 import { SearchPage } from '../pages/Search';
@@ -8,6 +8,7 @@ import { ProfileEditorPage } from '../pages/ProfileEditor';
 import { ImportPage } from '../pages/Import';
 import { PrivacyPage } from '../pages/Privacy';
 import { AboutPage } from '../pages/About';
+import { BrandLogo } from '../components/BrandLogo';
 
 function route() {
   const hash = decodeURIComponent(window.location.hash.replace(/^#\/?/, ''));
@@ -48,7 +49,7 @@ export function App() {
   }
   return <div className="site-shell">
     <header className="site-header"><div className="header-inner">
-      <a className="brand" href="#/home"><span className="brand-mark"><GraduationCap size={22} /></span><span>Calculate GPA Plus</span></a>
+      <a className="brand" href="#/home"><span className="brand-mark"><BrandLogo /></span><span>GPA Max</span></a>
       <nav id="main-navigation" className={menuOpen ? 'main-nav open' : 'main-nav'} aria-label="Main navigation">
         {nav.map(({ href, label, icon: Icon }) => <a key={href} className={(window.location.hash || '#/home') === href ? 'active' : ''} href={href}>{Icon && <Icon size={15} />}{label}</a>)}
       </nav>
@@ -57,10 +58,10 @@ export function App() {
       </button>
     </div></header>
     <main className="main-content">{content}</main>
-    <footer className="site-footer"><div className="footer-inner"><div className="footer-intro"><strong>Calculate GPA Plus</strong><p>A GPA and CGPA calculator for university students. Build shared academic profiles, explore modules, and export PDF result reports.</p></div>
+    <footer className="site-footer"><div className="footer-inner"><div className="footer-intro"><strong>GPA Max</strong><p>A GPA and CGPA calculator for university students. Build shared academic profiles, explore modules, and export PDF result reports.</p></div>
       <div className="footer-nav"><h2>Quick navigation</h2><div className="footer-links"><a href="#/home">Home page</a><a href="#/calculator">Normal GPA Calculator</a><a href="#/create">Create shared profile</a><a href="#/search">Search profiles</a><a href="#/about">About</a><a href="#/privacy">Privacy policy</a></div></div>
       <div className="footer-privacy"><h2>Privacy &amp; security</h2><p>Your grade choices on a shared profile stay in your browser. Profile creators control edits with an owner passcode.</p><a href="#/privacy">Read full privacy policy →</a></div>
-      <small>© {new Date().getFullYear()} Calculate GPA Plus · K.Kabeesan</small></div></footer>
+      <small>© {new Date().getFullYear()} GPA Max · K.Kabeesan</small></div></footer>
   </div>;
 }
 

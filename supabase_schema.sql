@@ -1,5 +1,5 @@
 -- =============================================================
--- CALCULATE GPA PLUS - SUPABASE FREE DATABASE SCHEMA SCRIPT
+-- GPA MAX - SUPABASE FREE DATABASE SCHEMA SCRIPT
 -- Paste this script into your Supabase SQL Editor and click "Run"
 -- =============================================================
 

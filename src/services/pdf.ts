@@ -14,7 +14,7 @@ export function buildReport(profile: ProfileDraft, studentName = '', download = 
   doc.setTextColor(255, 255, 255);
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(18);
-  doc.text('CALCULATE GPA PLUS', 14, 17);
+  doc.text('GPA MAX', 14, 17);
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(10);
   doc.text('Academic results report', 14, 25);

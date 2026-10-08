@@ -1,6 +1,6 @@
-# Calculate GPA Plus
+# GPA Max
 
-**Calculate GPA Plus** is a fast, responsive web application for calculating semester GPA and overall Cumulative GPA (CGPA).
+**GPA Max** is a fast, responsive web application for calculating semester GPA and overall Cumulative GPA (CGPA).
 
 ## Features
 
@@ -95,4 +95,4 @@ If the API reports `DATABASE_UNAVAILABLE`, configure the two Supabase variables 
 
 ## License
 
-MIT License © 2026 Calculate GPA Plus — Created by K.Kabeesan. See [LICENSE](LICENSE).
+MIT License © 2026 GPA Max — Created by K.Kabeesan. See [LICENSE](LICENSE).

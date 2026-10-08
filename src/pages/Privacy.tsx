@@ -2,7 +2,7 @@ import { PageHead } from '../components/ui';
 
 export function PrivacyPage() {
   return <div className="container narrow">
-    <PageHead eyebrow="YOUR DATA" title="Privacy Policy">How Calculate GPA Plus handles academic profiles, grade calculations, and browser storage.</PageHead>
+    <PageHead eyebrow="YOUR DATA" title="Privacy Policy">How GPA Max handles academic profiles, grade calculations, and browser storage.</PageHead>
 
     <section className="panel static-page stack">
       <h2>Private grade calculations</h2>

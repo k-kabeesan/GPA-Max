@@ -21,7 +21,7 @@
 @media(max-width:760px){.home-hero-v2{padding:44px 34px}.home-hero-copy h1{font-size:clamp(38px,9vw,54px)}.home-paths{padding:55px 0}.home-workflow{padding:30px}.home-tool-band{padding:27px}.home-confidence{grid-template-columns:1fr;padding:45px 5px}.home-confidence>div{display:grid;grid-template-columns:auto 1fr;column-gap:13px}.home-confidence h3{margin:2px 0 6px}.home-confidence p{grid-column:2}}
 @media(max-width:480px){.home-hero-v2{padding:30px 21px;border-radius:17px}.home-hero-copy h1{font-size:clamp(35px,11vw,45px);margin:25px 0 16px}.home-hero-copy>p{font-size:15px}.home-hero-actions{display:grid}.home-trust-row{display:grid;gap:10px}.home-proof{grid-template-columns:1fr}.home-proof div{border-right:0;border-bottom:1px solid #e6eaf2!important}.home-proof div:last-child{border-bottom:0!important}.home-paths{padding:45px 0}.path-card{padding:23px}.home-workflow{padding:22px}.workflow-heading h2{font-size:26px}.workflow-steps article{grid-template-columns:39px 1fr;gap:11px}.home-tool-band{grid-template-columns:1fr;padding:22px}.home-tool-band .button{grid-column:auto}.home-final-cta{padding:39px 20px}.home-final-cta>div{display:grid}.home-final-cta .button{width:100%}}
 
-/* Visual language of the original Calculate GPA Plus site. */
+/* Visual language of the original GPA Max site. */
 :root{color:#1b2335;background:#fafbfe}
 body{background:#fafbfe}
 .container,.header-inner,.footer-inner{width:min(1210px,calc(100% - 40px))}
