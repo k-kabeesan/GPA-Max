@@ -1,0 +1,15 @@
+{
+  "name": "GPA Max",
+  "short_name": "GPA Max",
+  "description": "GPA calculator for university students.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "icons": [
+    {
+      "src": "/gpa-max-icon.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
