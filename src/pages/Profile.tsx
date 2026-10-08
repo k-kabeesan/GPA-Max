@@ -4,7 +4,6 @@ import type { Profile, Semester } from '../domain/model';
 import { calculateCgpa, calculateGpa } from '../domain/gpa';
 import { GpaSummary, Loading, Notice, PageHead } from '../components/ui';
 import { GpaInsights } from '../components/GpaInsights';
-import { buildReport } from '../services/pdf';
 
 export function ProfilePage({ id }: { id: string }) {
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -39,10 +38,13 @@ export function ProfilePage({ id }: { id: string }) {
     try { await navigator.clipboard.writeText(`${window.location.origin}/#/profile/${profile.id}`); setCopied(true); }
     catch { setError('Unable to copy the link. You can copy this page address from your browser.'); }
   };
-  const downloadPdf = () => {
+  const downloadPdf = async () => {
     if (!personal) return;
     setError('');
-    try { buildReport(personal, studentName); }
+    try {
+      const { buildReport } = await import('../services/pdf');
+      buildReport(personal, studentName);
+    }
     catch { setError('Unable to create the PDF. Please try again or use a different browser.'); }
   };
   if (loading) return <div className="container"><Loading label="Loading profile…" /></div>;
