@@ -5,7 +5,6 @@ import { SubjectEditor } from '../components/SubjectEditor';
 import { GpaInsights } from '../components/GpaInsights';
 import { calculateGpa } from '../domain/gpa';
 import { defaultScale, newDraft, newSemester, type GradePoint } from '../domain/model';
-import { buildReport } from '../services/pdf';
 
 export function CalculatorPage() {
   const [semester, setSemester] = useState(() => newSemester(1));
@@ -34,9 +33,12 @@ export function CalculatorPage() {
     sessionStorage.setItem('gpa-new-profile', JSON.stringify({ ...newDraft(), semesters: [semester], scale }));
     window.location.hash = '#/create';
   };
-  const downloadPdf = () => {
+  const downloadPdf = async () => {
     setError('');
-    try { buildReport({ ...newDraft(), name: 'GPA Calculation', university, semesters: [semester], scale }, studentName); }
+    try {
+      const { buildReport } = await import('../services/pdf');
+      buildReport({ ...newDraft(), name: 'GPA Calculation', university, semesters: [semester], scale }, studentName);
+    }
     catch { setError('Unable to create the PDF. Please try again or use a different browser.'); }
   };
   return <div className="container calculator-page"><PageHead eyebrow="NO ACCOUNT NEEDED" title="Normal GPA Calculator">Add your subjects, credits, and grades to calculate a weighted semester result.</PageHead>
