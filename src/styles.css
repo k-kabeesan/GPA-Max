@@ -28,7 +28,7 @@ body{background:#fafbfe}
 .site-header{background:#151d2d;border-bottom:1px solid #283148;box-shadow:0 2px 9px #151d2d22}
 .header-inner{height:64px}
 .brand{color:#f7f8fc;font-size:17px}
-.brand-mark{width:40px;height:40px;background:linear-gradient(135deg,#6541f3,#cc37c9);box-shadow:0 5px 16px #6d44e84d}
+.brand-mark{width:40px;height:40px;background:transparent;box-shadow:none}.brand-mark img{display:block;width:100%;height:100%;object-fit:contain}
 .main-nav{gap:5px}
 .main-nav a{display:inline-flex;align-items:center;gap:7px;padding:10px 12px;border-radius:9px;color:#c2c9d8;font-size:12px;white-space:nowrap;transition:background .16s,color .16s}
 .main-nav a:hover{color:#fff;background:#253149}
